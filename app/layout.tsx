@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import './globals.css'
+import './reset.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        {children}
+        <Link href={'/login'}>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Go Login
+          </button>
+        </Link>
+
+        <Link href={'/register'}>
+          <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+            Go Register
+          </button>
+        </Link>
+
+
+      </body>
     </html>
   )
 }
