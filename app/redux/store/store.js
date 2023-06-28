@@ -6,10 +6,15 @@ import darkModeSlice from "../actions/darkmode/mode";
 // import authReducer from "../actions/auth/authReducer";
 import userData from "../actions/userData";
 
-export const store = configureStore({
-  reducer: {
-    mode: darkModeSlice,
-    userData: userData,
+export function createStore() {
+  const store = configureStore({
+    reducer: {
+      mode: darkModeSlice,
+      userData: userData,
+    },
+  });
 
-  },
-});
+  return store;
+}
+
+export const store = createStore({});
