@@ -16,6 +16,7 @@ const PageHead: React.FC<PageHeadProps> = ({description, title, keywords}) => {
         <meta property="og:url" content="http://yourwebsite.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="http://yourwebsite.com" />
+
     </div>
   )
 }
