@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
-import { store } from '../../../redux/store/store'
-import { darkMode } from '@/app/redux/actions/darkmode/mode';
+import { store } from '../../redux/store/store'
+import { darkMode } from '../../redux/actions/darkmode/mode';
 export default function Login() {
   //  const { payload: mode } =  store.dispatch(darkMode("true")); //errorr
   // const { mode } = store.getState().mode;
