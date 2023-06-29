@@ -5,7 +5,9 @@ import { Inter } from 'next/font/google'
 import PageHead from './head/head'
 import { StoreProvider } from './redux/store-provider'
 import { store } from './redux/store/store'
-
+import Header from './layouts/header'
+import Footer from './layouts/footer'
+import { Suspense } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -18,9 +20,12 @@ export default function RootLayout({
     <html lang="en" >
       <body className={inter.className}>
         <StoreProvider>
+          <Header />
           <div>
             <PageHead title="HOME PAGE" description={"HOME PAGE DESC"} keywords="next,app,keywords" />
-            {children}
+            <Suspense fallback="Loading...">
+              {children}
+            </Suspense>
             <div>
               <Link href={'/'}>
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
@@ -37,8 +42,14 @@ export default function RootLayout({
                   Go Register
                 </button>
               </Link>
+              <Link href={'/blog/2'}>
+                <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                  Go BLOG PAGE
+                </button>
+              </Link>
             </div>
           </div>
+          <Footer />
         </StoreProvider>
       </body>
     </html>
