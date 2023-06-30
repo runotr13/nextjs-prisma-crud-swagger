@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Cookies from "js-cookie"
 const SaveTokenCookie = (token) => {
 

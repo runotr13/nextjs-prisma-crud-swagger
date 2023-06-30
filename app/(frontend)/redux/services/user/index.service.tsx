@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import getHeader from "@/app/(frontend)/helpers/getHeader";
 
 

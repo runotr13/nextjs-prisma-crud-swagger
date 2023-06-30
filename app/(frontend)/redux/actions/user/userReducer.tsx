@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import UserServices from "../../services/user/index.service";
 

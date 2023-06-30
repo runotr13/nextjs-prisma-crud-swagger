@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { toastErrorNotify, toastSuccessNotify } from "../../../helpers/ToastNotify";
 import { SaveTokenCookie } from "@/app/(frontend)/utils/cookie";

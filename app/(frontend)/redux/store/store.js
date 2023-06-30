@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "../actions/auth/authReducer";
