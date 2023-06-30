@@ -1,7 +1,7 @@
-import { cookies } from 'next/headers'
-const getToken = () => {
-  const cookieStore = cookies()
-  const token = cookieStore.get('token')
+import Cookies from "js-cookie"
+
+const getToken = (): string | undefined => {
+  const token = Cookies.get('token')
   return token
 }
 

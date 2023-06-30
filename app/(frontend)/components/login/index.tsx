@@ -4,8 +4,9 @@ import { store } from '../../redux/store/store'
 import { darkMode } from '../../redux/actions/darkmode/mode';
 export default function Login() {
   //  const { payload: mode } =  store.dispatch(darkMode("true")); //errorr
-  // const { mode } = store.getState().mode;
+  const { mode } = store.getState().mode;
   const [count, setCount] = React.useState(0);
+  const [newMode, setNewMode] = React.useState(mode);
   const increase = () => {
     setCount(count + 1)
     console.log('count', count)
@@ -14,12 +15,19 @@ export default function Login() {
     setCount(count - 1)
     console.log('count', count)
   }
+  const changeMode = () => {
+    store.dispatch(darkMode(!newMode)); 
+  }
   return (
     <div>Login Components
       count : {count}
       <div>
         <button onClick={() => increase()} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Arttir</button>
         <button onClick={() => decrease()} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Azalt</button>
+      </div>
+      <div>
+        {mode?.toString()}
+        <button onClick={() => changeMode()} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Change Mode</button>
       </div>
     </div>
   )
