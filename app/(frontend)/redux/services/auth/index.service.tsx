@@ -11,6 +11,7 @@ async function getData(obj: object, path: string): Promise<Response> {
     headers: headers,
     body: JSON.stringify(obj)
   });
+  if (!response.ok) throw new Error(response.statusText)
   return response.json();
 };
 
@@ -28,7 +29,7 @@ async function verifyAccount(obj: object): Promise<any> {
 };
 async function logoutUser(refreshToken: object): Promise<any> {
   const response = await getData(refreshToken, 'logout');
-  if(response.ok){
+  if (response.ok) {
     await RemoveTokenCookie();
     await RemoveUserCookie();
   }

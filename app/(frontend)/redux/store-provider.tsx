@@ -1,13 +1,12 @@
 "use client";
 import React, { ReactNode } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from "./store/store";
+import { store } from "./store/store";
 interface StoreProviderProps {
     children: ReactNode;
 }
 
-export const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
-    const store = createStore();
+export function StoreProvider({ children }: StoreProviderProps) {
     return (
         <Provider store={store}>
             {children}

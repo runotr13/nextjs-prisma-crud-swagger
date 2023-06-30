@@ -16,8 +16,6 @@ const initialState: UserState = {
   loading: false,
 };
 
-
-
 export const login = createAsyncThunk(
   "auth/createOrCheckEmail",
   async (obj: any, { rejectWithValue }) => {
@@ -25,7 +23,7 @@ export const login = createAsyncThunk(
       const response = await AuthServices.login(obj);
       return response.data;
     } catch (err: any) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue(err);
     }
   }
 );

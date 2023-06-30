@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(frontend)/(container)/register/page.tsx", "app/(frontend)/components/register/index.tsx", "app/(frontend)/utils/cookie.js", "app/(frontend)/redux/store/store.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(frontend)/(container)/register/page.tsx", "app/(frontend)/components/register/index.tsx", "app/(frontend)/utils/cookie.js", "app/(frontend)/redux/store/store.ts"],
   "exclude": ["node_modules"]
 }
