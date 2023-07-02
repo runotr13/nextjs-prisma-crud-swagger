@@ -7,6 +7,7 @@ export default function Login() {
   const { mode } = store.getState().mode;
   const [count, setCount] = React.useState(0);
   const [newMode, setNewMode] = React.useState(mode);
+  console.log('LOGIN PAGE use client')
   const increase = () => {
     setCount(count + 1)
     console.log('count', count)

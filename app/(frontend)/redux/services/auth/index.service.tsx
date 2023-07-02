@@ -2,11 +2,9 @@
 import getHeader from "@/app/(frontend)/helpers/getHeader";
 import { RemoveTokenCookie, RemoveUserCookie } from "@/app/(frontend)/utils/cookie";
 
-let headers = getHeader();
-let BACKEND_URL = process.env.BACKEND_API_URL;
-
+var headers = getHeader();
 async function getData(obj: object, path: string): Promise<Response> {
-  const response = await fetch(`${BACKEND_URL}/auth/${path}`, {
+  const response = await fetch('/api/login', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify(obj)
