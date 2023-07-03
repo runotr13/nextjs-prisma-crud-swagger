@@ -25,6 +25,7 @@
     "joi": "^17.9.2",
     "js-cookie": "^3.0.5",
     "next": "^13.4.7",
+    "next-auth": "^4.22.1",
     "next-connect": "^1.0.0-next.4",
     "next-swagger-doc": "^0.4.0",
     "next-validations": "^0.3.2",
